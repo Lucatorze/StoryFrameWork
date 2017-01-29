@@ -1,6 +1,7 @@
 <?php
 include_once __DIR__.'/../Controller/roomCreator.php';
 include_once __DIR__.'/../Controller/doorController.php';
+include_once __DIR__.'/../Controller/eventController.php';
 include_once __DIR__.'/../config/init.php';
 ?>
 <!DOCTYPE html>
@@ -34,9 +35,10 @@ include_once __DIR__.'/../config/init.php';
 
             }elseif($_SESSION['bool'] == "yes" && $room->getBoolEnd() == "yes"){
 
-                if ($_SESSION['life'] > 0){
-                    echo "You have lost but you have ".$_SESSION['life']. " life";
-                    $_SESSION['life'] = $_SESSION['life'] - 1;
+                if ($life->getLife() > 0){
+                    echo "You have lost but you have ".$life->getLife(). " life";
+                    $life->setLife($life->getLife()-1);
+
                 }else{
                     echo "You have lost<br><a href='/game/".$game."/1'>Restart</a> - <a href='/'>Quit</a>";
                     session_destroy();

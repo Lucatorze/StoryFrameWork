@@ -9,6 +9,7 @@ use Symfony\Component\Routing\RequestContext;
 use Symfony\Component\Routing\Matcher\UrlMatcher;
 
 require_once __DIR__."/../app/class/Room.php";
+require_once __DIR__."/../app/class/Life.php";
 
 $request = Request::createFromGlobals();
 $response = new Response();
