@@ -1,11 +1,12 @@
 <?php
-
+session_start();
 require_once (__DIR__ . "/../vendor/autoload.php");
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\RouteCollection;
 use Symfony\Component\Routing\Exception\ResourceNotFoundException;
+
 
 use Symfony\Component\Routing\RequestContext;
 use Symfony\Component\Routing\Matcher\UrlMatcher;
@@ -15,6 +16,7 @@ require_once __DIR__."/../app/class/Room.php";
 $request = Request::createFromGlobals();
 $response = new Response();
 
+
 $routes = new RouteCollection();
 include (__DIR__."/../app/config/routing.php");
 
@@ -23,7 +25,6 @@ $context->fromRequest($request);
 $matcher = new UrlMatcher($routes, $context);
 
 try{
-    session_start();
 
     $attributes = $matcher->match($request->getPathInfo());
     extract($attributes, EXTR_SKIP);
