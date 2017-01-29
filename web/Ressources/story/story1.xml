@@ -11,6 +11,7 @@
         </doors>
         <info>There is nobody else around.</info>
         <boolEnd>no</boolEnd>
+        <boolEvent>no</boolEvent>
     </room>
 
     <room id="2">
@@ -22,6 +23,7 @@
         </doors>
         <info>There is nobody else around.</info>
         <boolEnd>yes</boolEnd>
+        <boolEvent>no</boolEvent>
     </room>
 
     <room id="3">
@@ -33,5 +35,6 @@
         </doors>
         <info>There is nobody else around.</info>
         <boolEnd>no</boolEnd>
+        <boolEvent>Yes</boolEvent>
     </room>
 </story>

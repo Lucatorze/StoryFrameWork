@@ -1,6 +1,7 @@
 <?php
 include_once __DIR__.'/../Controller/roomCreator.php';
-include_once __DIR__.'/../Controller/gameController.php';
+include_once __DIR__.'/../Controller/doorController.php';
+include_once __DIR__.'/../config/init.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,28 +21,9 @@ include_once __DIR__.'/../Controller/gameController.php';
     </div>
 
     <div class="choice">
-
         <ul>
-            <?php
-                foreach ($xml->room[$chapter]->doors as $value){
-
-                        if ($room->getDoorsNorth() && $room->getDoorsNorth() == $value->north){
-                            echo "<li>North door : <a href='/game/".$game."/".$_SESSION['listRoom'][strtolower((String)$value->north)]."'>".$value->north."</a>";
-                        }
-                        if ($room->getDoorsSouth() && $room->getDoorsSouth() == $value->south){
-                            echo "<li>South door : <a href='/game/".$game."/".$_SESSION['listRoom'][strtolower((String)$value->south)]."'>".$value->south."</a>";
-                        }
-                        if ($room->getDoorsEast() && $room->getDoorsEast() == $value->east){
-                            echo "<li>East door : <a href='/game/".$game."/".$_SESSION['listRoom'][strtolower((String)$value->east)]."'>".$value->east."</a>";
-                        }
-                        if ($room->getDoorsWest() && $room->getDoorsWest() == $value->west){
-                            echo "<li>West door : <a href='/game/".$game."/".$_SESSION['listRoom'][strtolower((String)$value->west)]."'>".$value->west."</a>";
-                        }
-            }
-
-            ?>
+            <?php doors($xml, $chapter, $game, $room); ?>
         </ul>
-
     </div>
 
     <div class="info">

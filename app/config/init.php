@@ -6,7 +6,7 @@ unset($_SESSION['currentRoom']);
 
 if (file_exists($story)) {
     $xml = simplexml_load_file($story);
-
+    $roomAccess = $xml->room[$chapter];
     if (!isset($_SESSION['life'])){
         $_SESSION['life'] = 3;
     }
@@ -23,27 +23,27 @@ if (file_exists($story)) {
         $_SESSION['listRoom'] = $listRoom;
     }
 
-    if ($xml->room[$chapter]->doors->north){
-        $north = $xml->room[$chapter]->doors->north;
+    if ($roomAccess->doors->north){
+        $north = $roomAccess->doors->north;
     }else{
         $north = " ";
     }
-    if ($xml->room[$chapter]->doors->south){
-        $south = $xml->room[$chapter]->doors->south;
+    if ($roomAccess->doors->south){
+        $south = $roomAccess->doors->south;
     }else{
         $south = " ";
     }
-    if ($xml->room[$chapter]->doors->east){
-        $east = $xml->room[$chapter]->doors->east;
+    if ($roomAccess->doors->east){
+        $east = $roomAccess->doors->east;
     }else{
         $east = " ";
     }
-    if ($xml->room[$chapter]->doors->west){
-        $west = $xml->room[$chapter]->doors->west;
+    if ($roomAccess->doors->west){
+        $west = $roomAccess->doors->west;
     }else{
         $west = " ";
     }
-    $_SESSION['currentRoom'] = create($xml->room[$chapter]->title, $xml->room[$chapter]->location, $xml->room[$chapter]->description, $north, $south, $east, $west, $xml->room[$chapter]->info, $xml->room[$chapter]->boolEnd);
+    $_SESSION['currentRoom'] = create($roomAccess->title, $roomAccess->location, $roomAccess->description, $north, $south, $east, $west, $roomAccess->info, $roomAccess->boolEnd);
     $room = $_SESSION['currentRoom'];
 
 
