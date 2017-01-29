@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<story>
+    <cloak>yes</cloak>
+    <room>
+        <title>home</title>
+        <location>The Foyer of the Opera House</location>
+        <description>This empty room has doors to the south and west, also an unusable exit to the north. </description>
+        <doors>
+            <south>Bar</south>
+            <west>Cloakroom</west>
+        </doors>
+        <info>There is nobody else around.</info>
+    </room>
+
+    <room>
+        <title>bar</title>
+        <location>Bar of the Opera House</location>
+        <description>Is initially unlit</description>
+        <doors>
+            <north>Foyer</north>
+        </doors>
+        <info>There is nobody else around.</info>
+    </room>
+
+    <room>
+        <title>cloakroom</title>
+        <location>Cloakroom of the Opera House</location>
+        <description>Is fixed a small brass hook.</description>
+        <doors>
+            <east>Foyer</east>
+        </doors>
+        <info>There is nobody else around.</info>
+    </room>
+</story>
