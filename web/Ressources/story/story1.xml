@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="ISO-8859-1" ?>
 <story>
-    <cloak>yes</cloak>
-    <room>
-        <title>home</title>
+    <bool>yes</bool>
+    <room id="1">
+        <title>foyer</title>
         <location>The Foyer of the Opera House</location>
         <description>This empty room has doors to the south and west, also an unusable exit to the north. </description>
         <doors>
@@ -10,9 +10,10 @@
             <west>Cloakroom</west>
         </doors>
         <info>There is nobody else around.</info>
+        <boolEnd>no</boolEnd>
     </room>
 
-    <room>
+    <room id="2">
         <title>bar</title>
         <location>Bar of the Opera House</location>
         <description>Is initially unlit</description>
@@ -20,9 +21,10 @@
             <north>Foyer</north>
         </doors>
         <info>There is nobody else around.</info>
+        <boolEnd>yes</boolEnd>
     </room>
 
-    <room>
+    <room id="3">
         <title>cloakroom</title>
         <location>Cloakroom of the Opera House</location>
         <description>Is fixed a small brass hook.</description>
@@ -30,5 +32,6 @@
             <east>Foyer</east>
         </doors>
         <info>There is nobody else around.</info>
+        <boolEnd>no</boolEnd>
     </room>
 </story>

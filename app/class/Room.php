@@ -11,6 +11,7 @@ class Room
     private $_doorsEast;
     private $_doorsWest;
     private $_info;
+    private $_boolEnd;
 
     public function setName($name)
     {
@@ -90,6 +91,16 @@ class Room
     public function getInfo()
     {
         return $this->_info;
+    }
+
+    public function setBoolEnd($boolEnd)
+    {
+        $this->_boolEnd = $boolEnd;
+    }
+
+    public function getBoolEnd()
+    {
+        return $this->_boolEnd;
     }
 
 }

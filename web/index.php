@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 require_once (__DIR__ . "/../vendor/autoload.php");
 
 use Symfony\Component\HttpFoundation\Request;
@@ -23,6 +23,8 @@ $context->fromRequest($request);
 $matcher = new UrlMatcher($routes, $context);
 
 try{
+    session_start();
+
     $attributes = $matcher->match($request->getPathInfo());
     extract($attributes, EXTR_SKIP);
 
