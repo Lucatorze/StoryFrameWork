@@ -11,6 +11,7 @@ if (file_exists($story)) {
 
     $boolName = (String)$xml->boolName;
     $endLostMsg = (String)$xml->endLostMsg;
+    $eventMsg = (String)$xml->event->msg;
 
     if(!$session->get('bool')){
         $session->set('bool', (string)$xml->bool);
@@ -22,6 +23,7 @@ if (file_exists($story)) {
             $listRoom[(String)$xml->room[$i]->title] = $i+1;
         }
     }
+
 
     if ($roomAccess->doors->north){
         $north = (string)$roomAccess->doors->north;

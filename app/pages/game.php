@@ -37,7 +37,7 @@ include_once __DIR__.'/../config/init.php';
                 }
             }elseif ($room->geboolEvent() == "yes"){
                 if ($session->get('bool') == "yes") {
-                    echo "<div class=\"well\" align='center'>Want to put your cloak on the hook or on the floor ?<br><br>";
+                    echo "<div class=\"well\" align='center'>".$eventMsg."<br><br>";
                     ?>
 
                     <form action="<?php $_SERVER['PATH_INFO']; ?>" method="post">
