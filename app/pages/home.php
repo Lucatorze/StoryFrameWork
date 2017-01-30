@@ -14,7 +14,7 @@
             $file = pathinfo($file);
             echo "- <a href='/game/".$file['filename']."/1'>".$file['filename']."</a><br>";
         }
-
+        
         ?>
     </p>
 </div>

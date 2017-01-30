@@ -23,6 +23,7 @@ include_once __DIR__.'/../config/init.php';
             } ?>
         </ul>
 
+
     <div class="info">
         <?php
             if ($session->get('bool') != "yes" && $room->getBoolEnd() == "yes"){
