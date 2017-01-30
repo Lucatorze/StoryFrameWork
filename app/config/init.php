@@ -13,11 +13,10 @@ if (file_exists($story)) {
     }
 
     $listRoom = [];
-    if (!isset($_SESSION['listRoom'])){
+    if (count($listRoom) == 0){
         for($i=0; $i<sizeof($xml->room);$i++){
             $listRoom[(String)$xml->room[$i]->title] = $i+1;
         }
-        $_SESSION['listRoom'] = $listRoom;
     }
 
     if ($roomAccess->doors->north){
@@ -44,13 +43,9 @@ if (file_exists($story)) {
     $_SESSION['currentRoom'] = create((string)$roomAccess->title, (string)$roomAccess->location, (string)$roomAccess->description, $north, $south, $east, $west, (string)$roomAccess->info, (string)$roomAccess->boolEnd);
     $room = $_SESSION['currentRoom'];
 
-
-    if (!isset($_SESSION['life'])){
-        var_dump("ok");
-        $_SESSION['life'] = 3;
-        $life = $_SESSION['life'];
+    if(!$session->get('life')){
+        $session->set('life', 3);
     }
-
 
 } else {
     exit('Echec lors de l\'ouverture du l\'histoire ');

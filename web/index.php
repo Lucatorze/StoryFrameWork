@@ -1,5 +1,4 @@
 <?php
-session_start();
 require_once (__DIR__ . "/../vendor/autoload.php");
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -8,6 +7,9 @@ use Symfony\Component\Routing\Exception\ResourceNotFoundException;
 use Symfony\Component\Routing\RequestContext;
 use Symfony\Component\Routing\Matcher\UrlMatcher;
 use Symfony\Component\HttpFoundation\Session\Session;
+
+$session = new Session();
+$session->start();
 
 require_once __DIR__."/../app/class/Room.php";
 

@@ -13,8 +13,8 @@
 <ul>
 <?php
 
+$session->clear();
 session_destroy();
-
 $files = glob(__DIR__.'/../../web/Ressources/story/*.*');
 
 foreach($files as $file) {
