@@ -12,6 +12,7 @@ class Room
     private $_doorsWest;
     private $_info;
     private $_boolEnd;
+    private $_boolEvent;
 
     public function setName($name)
     {
@@ -101,6 +102,16 @@ class Room
     public function getBoolEnd()
     {
         return $this->_boolEnd;
+    }
+
+    public function setboolEvent($boolEvent)
+    {
+        $this->_boolEvent = $boolEvent;
+    }
+
+    public function geboolEvent()
+    {
+        return $this->_boolEvent;
     }
 
 }

@@ -8,8 +8,8 @@ if (file_exists($story)) {
     $xml = simplexml_load_file($story);
     $roomAccess = $xml->room[$chapter];
 
-    if(!isset($_SESSION['bool'])){
-        $_SESSION['bool'] = (string)$xml->bool;
+    if(!$session->get('bool')){
+        $session->set('bool', (string)$xml->bool);
     }
 
     $listRoom = [];
@@ -40,7 +40,8 @@ if (file_exists($story)) {
         $west = " ";
     }
 
-    $_SESSION['currentRoom'] = create((string)$roomAccess->title, (string)$roomAccess->location, (string)$roomAccess->description, $north, $south, $east, $west, (string)$roomAccess->info, (string)$roomAccess->boolEnd);
+    $_SESSION['currentRoom'] = create((string)$roomAccess->title, (string)$roomAccess->location, (string)$roomAccess->description,
+                               $north, $south, $east, $west, (string)$roomAccess->info, (string)$roomAccess->boolEnd, (string)$roomAccess->boolEvent);
     $room = $_SESSION['currentRoom'];
 
     if(!$session->get('life')){

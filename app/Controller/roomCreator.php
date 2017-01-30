@@ -1,6 +1,6 @@
 <?php
 
-function create($title, $location, $description, $north, $south, $east, $west, $info, $boolEnd){
+function create($title, $location, $description, $north, $south, $east, $west, $info, $boolEnd, $boolEvent){
 
     $room = new Room();
 
@@ -13,6 +13,7 @@ function create($title, $location, $description, $north, $south, $east, $west, $
     $room->setDoorsWest($west);
     $room->setInfo($info);
     $room->setBoolEnd($boolEnd);
+    $room->setboolEvent($boolEvent);
 
     return $room;
 }
