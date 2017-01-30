@@ -11,8 +11,8 @@
             <west>FurnitureRoom</west>
         </doors>
         <info>There is nobody else around.</info>
-        <boolEnd>No</boolEnd>
-        <boolEvent>No</boolEvent>
+        <boolEnd>no</boolEnd>
+        <boolEvent>no</boolEvent>
     </room>
 
     <room id="2">
@@ -35,8 +35,8 @@
             <east>entrance</east>
         </doors>
         <info>There is nobody else around.</info>
-        <boolEnd>No</boolEnd>
-        <boolEvent>Yes</boolEvent>
+        <boolEnd>no</boolEnd>
+        <boolEvent>yes</boolEvent>
     </room>
 	
 	<endLostMsg>On entering the room, you notice that it is prohibed enter with guns and you can't consume. In trying to move forward, you shoot and kill someone. You should probably remove your gun.</endLostMsg>
