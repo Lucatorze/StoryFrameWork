@@ -43,8 +43,8 @@
     <event>
         <msg>Want to put your cloak on the hook or on the floor ?</msg>
         <choice>
-            <hook>On the hook</hook>
-            <floor>On the floor</floor>
+            <choose>hook</choose>
+            <choose>floor</choose>
         </choice>
     </event>
 

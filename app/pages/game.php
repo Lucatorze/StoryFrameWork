@@ -3,7 +3,7 @@ include_once __DIR__.'/../Controller/roomCreator.php';
 include_once __DIR__.'/../Controller/doorController.php';
 include_once __DIR__.'/../Controller/formController.php';
 include_once __DIR__.'/../config/init.php';
-    include (__DIR__.'/includes/header.php');
+include (__DIR__.'/includes/header.php');
 ?>
 
 <div class="jumbotron">
@@ -43,8 +43,13 @@ include_once __DIR__.'/../config/init.php';
                     <form action="<?php $_SERVER['PATH_INFO']; ?>" method="post">
                         <select id="event" name="event">
                             <option selected disabled>Choose on the list</option>
-                            <option value="hook">On the hook</option>
-                            <option value="floor">On the floor</option>
+                            <?php
+                            if (count($listChoice) == 0){
+                                for($i=0; $i<sizeof($xml->event->choice->choose);$i++){
+                                    echo "<option>".(String)$xml->event->choice->choose[$i]."</option>";
+                                }
+                            }
+                            ?>
                         </select>
                         <input type="submit">
                     </form>

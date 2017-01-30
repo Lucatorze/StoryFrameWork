@@ -11,18 +11,19 @@ if (file_exists($story)) {
     $boolName = (String)$xml->boolName;
     $endLostMsg = (String)$xml->endLostMsg;
     $eventMsg = (String)$xml->event->msg;
+    $listRoom = [];
+    $listChoice = [];
 
     if(!$session->get('bool')){
         $session->set('bool', (string)$xml->bool);
     }
 
-    $listRoom = [];
+
     if (count($listRoom) == 0){
         for($i=0; $i<sizeof($xml->room);$i++){
             $listRoom[(String)$xml->room[$i]->title] = $i+1;
         }
     }
-
 
     if ($roomAccess->doors->north){
         $north = (string)$roomAccess->doors->north;

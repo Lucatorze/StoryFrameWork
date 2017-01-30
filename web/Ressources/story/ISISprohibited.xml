@@ -43,8 +43,8 @@
     <event>
         <msg>Want to put your gun on the arms rack or on the floor ?</msg>
         <choice>
-            <hook>On the arms rack</hook>
-            <floor>On the floor</floor>
+            <choose>arms rack</choose>
+            <choose>floor</choose>
         </choice>
     </event>
 	
