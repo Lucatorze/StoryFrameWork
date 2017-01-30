@@ -14,6 +14,11 @@ Returning to the Bar without the cloak reveals that the room is now lit. A messa
 The message reads either "You have won" or "You have lost", depending on how much it was disturbed by the player while the room was dark.
 The act of reading the message ends the game.
 
+
+ISIS Prohibited
+
+The entrance is where the game begins. This empty room has doors to the south and west, also an unusable exit to the north. There is nobody else around. The Chicha lies south of the entrance, and is initially unlit. Trying to do anything other than return northwards results in a warning message about disturbing things in the dark. On the wall of the Furniture Room, to the west of the entrance, is fixed a arms rack. Taking an inventory of possessions reveals that the player have a AK-47 which stop the player to use a hookah. The player can drop the AK-47 on the floor of the Furniture Room or, better, put it on the arms rack. Returning to the Chicha Bar without the AK-47, the player can now consume. A message is scratched in the sawdust on the floor. The message reads either "You have won" or "You have lost", depending on how much it was disturbed by the player while the room was prohibited with guns. The act of reading the message ends the game.
+
 # Install
 
 Git clone the repository, and composer install
