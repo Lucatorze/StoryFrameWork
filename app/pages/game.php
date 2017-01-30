@@ -17,7 +17,7 @@ include (__DIR__.'/includes/header.php');
         Your life :
         <?php
             for($i=0; $i < $session->get('life'); $i++){
-                echo "<span class=\"glyphicon glyphicon-heart\" aria-hidden=\"true\"></span>";
+                echo "<span class=\"glyphicon glyphicon-heart\" aria-hidden=\"true\" style='color: red;'></span>";
             }
         ?>
     </div>

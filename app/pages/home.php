@@ -20,7 +20,7 @@
 </div>
 
 <footer class="footer">
-    <p>&copy; 2016 StoryFrameWork.</p>
+    <p>&copy; 2017 StoryFrameWork.</p>
 </footer>
 
 
