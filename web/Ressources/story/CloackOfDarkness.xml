@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1" ?>
 <story>
     <bool>yes</bool>
+    <boolName>cloak</boolName>
     <room id="1">
         <title>foyer</title>
         <location>The Foyer of the Opera House</location>
@@ -37,4 +38,14 @@
         <boolEnd>no</boolEnd>
         <boolEvent>yes</boolEvent>
     </room>
+
+    <endLostMsg>On entering the room, you notice that it is dark and that you see nothing. In trying to move forward, you drop furniture and break the decoration. You should probably remove your cloak.</endLostMsg>
+    <event>
+        <msg>Want to put your cloak on the hook or on the floor ?</msg>
+        <choice>
+            <hook>On the hook</hook>
+            <floor>On the floor</floor>
+        </choice>
+    </event>
 </story>
+

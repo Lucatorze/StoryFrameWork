@@ -30,8 +30,7 @@ include_once __DIR__.'/../config/init.php';
             }elseif($session->get('bool') == "yes" && $room->getBoolEnd() == "yes"){
                 $session->set('life', $session->get('life')-1);
                 if ($session->get('life') > 0){
-                    echo "<div class=\"alert alert-warning\" role=\"alert\">On entering the room, you notice that it is dark and that you see nothing. In trying to move forward, you drop furniture and break the decoration.<br>",
-                         "You should probably remove your cloak. You have lost but you have ".$session->get('life'). " life</div>";
+                    echo "<div class=\"alert alert-warning\" align='center' role=\"alert\">".$endLostMsg."<br> You have lost but you have ".$session->get('life'). " life</div>";
                 }else{
                     echo "<div class=\"alert alert-danger\" align='center' role=\"alert\">You have lost<br><a href='/game/".$game."/1'>Restart</a> - <a href='/'>Quit</a></div>";
                 }
@@ -51,7 +50,7 @@ include_once __DIR__.'/../config/init.php';
     </div>
         <?php
                 }else{
-                    echo "<div class=\"alert alert-info\" align='center' role=\"alert\">Your cloak is on the ".$session->get('bool')."</div>";
+                    echo "<div class=\"alert alert-info\" align='center' role=\"alert\">Your ".$boolName." is on the ".$session->get('bool')."</div>";
                 }
                 }
         ?>
