@@ -8,7 +8,6 @@ if (file_exists($story)) {
     $xml = simplexml_load_file($story);
     $roomAccess = $xml->room[$chapter];
 
-
     $boolName = (String)$xml->boolName;
     $endLostMsg = (String)$xml->endLostMsg;
     $eventMsg = (String)$xml->event->msg;

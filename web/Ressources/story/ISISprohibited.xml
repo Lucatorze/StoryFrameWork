@@ -3,7 +3,7 @@
     <bool>yes</bool>
 	<boolName>AK47</boolName>
     <room id="1">
-        <title>Entrance</title>
+        <title>entrance</title>
         <location>Chicha Entrance</location>
         <description>This chicha empty zone has doors to the south and west, also an unusable exit to the north.. </description>
         <doors>
@@ -16,7 +16,7 @@
     </room>
 
     <room id="2">
-        <title>Bar</title>
+        <title>bar</title>
         <location>Chicha Bar</location>
         <description>As long as you have your AK-47, you can't see anything</description>
         <doors>
@@ -28,7 +28,7 @@
     </room>
 
     <room id="3">
-        <title>FurnitureRoom</title>
+        <title>furnitureRoom</title>
         <location>FurnitureRoom of the Chicha Bar</location>
         <description>Is fixed a arms rack.</description>
         <doors>

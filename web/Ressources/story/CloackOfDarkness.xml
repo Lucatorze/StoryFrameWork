@@ -8,7 +8,7 @@
         <description>This empty room has doors to the south and west, also an unusable exit to the north. </description>
         <doors>
             <south>Bar</south>
-            <west>Cloakroom</west>
+            <west>cloakroom</west>
         </doors>
         <info>There is nobody else around.</info>
         <boolEnd>no</boolEnd>
