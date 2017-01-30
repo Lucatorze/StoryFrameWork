@@ -42,7 +42,7 @@ include_once __DIR__.'/../config/init.php';
 
                     <form action="<?php $_SERVER['PATH_INFO']; ?>" method="post">
                         <select id="event" name="event">
-                            <option>Choose on the list</option>
+                            <option selected disabled>Choose on the list</option>
                             <option value="hook">On the hook</option>
                             <option value="floor">On the floor</option>
                         </select>
