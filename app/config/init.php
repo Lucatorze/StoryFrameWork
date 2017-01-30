@@ -1,7 +1,7 @@
 <?php
 $game = $request->get('storie', $storie);
 $chapter = ($request->get('room', $room)-1);
-$story = __DIR__.'\..\..\web\Ressources\story\\'.$game;
+$story = __DIR__.'\..\..\web\Ressources\story\\'.$game.'.xml';
 unset($_SESSION['currentRoom']);
 
 if (file_exists($story)) {
@@ -44,9 +44,10 @@ if (file_exists($story)) {
     $_SESSION['currentRoom'] = create((string)$roomAccess->title, (string)$roomAccess->location, (string)$roomAccess->description, $north, $south, $east, $west, (string)$roomAccess->info, (string)$roomAccess->boolEnd);
     $room = $_SESSION['currentRoom'];
 
-    $life = 3;
+
     if (!isset($_SESSION['life'])){
-        $_SESSION['life'] = life($life);
+        var_dump("ok");
+        $_SESSION['life'] = 3;
         $life = $_SESSION['life'];
     }
 

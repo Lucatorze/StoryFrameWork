@@ -19,7 +19,7 @@ $files = glob(__DIR__.'/../../web/Ressources/story/*.*');
 
 foreach($files as $file) {
     $file = pathinfo($file);
-    echo "<li><a href='/game/".$file['filename'].".xml/1'>".$file['filename']."</a></li>";
+    echo "<li><a href='/game/".$file['filename']."/1'>".$file['filename']."</a></li>";
 }
 
 ?>

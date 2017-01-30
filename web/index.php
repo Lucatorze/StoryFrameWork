@@ -7,12 +7,13 @@ use Symfony\Component\Routing\RouteCollection;
 use Symfony\Component\Routing\Exception\ResourceNotFoundException;
 use Symfony\Component\Routing\RequestContext;
 use Symfony\Component\Routing\Matcher\UrlMatcher;
+use Symfony\Component\HttpFoundation\Session\Session;
 
 require_once __DIR__."/../app/class/Room.php";
-require_once __DIR__."/../app/class/Life.php";
 
 $request = Request::createFromGlobals();
 $response = new Response();
+
 
 $routes = new RouteCollection();
 include (__DIR__."/../app/config/routing.php");
