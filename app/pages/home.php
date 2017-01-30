@@ -1,28 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-<h1>StoryFrameWork</h1>
-
-
-<h2>List of story</h2>
-<ul>
 <?php
-
-$session->clear();
-session_destroy();
-$files = glob(__DIR__.'/../../web/Ressources/story/*.*');
-
-foreach($files as $file) {
-    $file = pathinfo($file);
-    echo "<li><a href='/game/".$file['filename']."/1'>".$file['filename']."</a></li>";
-}
-
+    include (__DIR__.'/includes/header.php');
 ?>
-</ul>
+<div class="jumbotron">
+    <h1>List of story</h1>
+    <p class="lead">
+        <?php
+
+        $session->clear();
+        session_destroy();
+        $files = glob(__DIR__.'/../../web/Ressources/story/*.*');
+
+        foreach($files as $file) {
+            $file = pathinfo($file);
+            echo "- <a href='/game/".$file['filename']."/1'>".$file['filename']."</a><br>";
+        }
+
+        ?>
+    </p>
+</div>
+
+<footer class="footer">
+    <p>&copy; 2016 StoryFrameWork.</p>
+</footer>
+
+
+        </div>
+
+    </div>
+
+</div>
+
 </body>
 </html>
