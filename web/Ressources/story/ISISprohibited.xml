@@ -7,7 +7,7 @@
         <location>Chicha Entrance</location>
         <description>This chicha empty zone has doors to the south and west, also an unusable exit to the north.. </description>
         <doors>
-            <south>Bar</south>
+            <south>bar</south>
             <west>FurnitureRoom</west>
         </doors>
         <info>There is nobody else around.</info>
@@ -20,7 +20,7 @@
         <location>Chicha Bar</location>
         <description>As long as you have your AK-47, you can't see anything</description>
         <doors>
-            <north>Entrance</north>
+            <north>entrance</north>
         </doors>
         <info>There is nobody else around.</info>
         <boolEnd>yes</boolEnd>
@@ -28,11 +28,11 @@
     </room>
 
     <room id="3">
-        <title>furnitureRoom</title>
+        <title>furnitureroom</title>
         <location>FurnitureRoom of the Chicha Bar</location>
         <description>Is fixed a arms rack.</description>
         <doors>
-            <east>Entrance</east>
+            <east>entrance</east>
         </doors>
         <info>There is nobody else around.</info>
         <boolEnd>No</boolEnd>

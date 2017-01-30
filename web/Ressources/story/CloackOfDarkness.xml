@@ -7,7 +7,7 @@
         <location>The Foyer of the Opera House</location>
         <description>This empty room has doors to the south and west, also an unusable exit to the north. </description>
         <doors>
-            <south>Bar</south>
+            <south>bar</south>
             <west>cloakroom</west>
         </doors>
         <info>There is nobody else around.</info>
