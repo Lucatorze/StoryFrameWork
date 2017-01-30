@@ -18,7 +18,6 @@ if (file_exists($story)) {
         $session->set('bool', (string)$xml->bool);
     }
 
-
     if (count($listRoom) == 0){
         for($i=0; $i<sizeof($xml->room);$i++){
             $listRoom[(String)$xml->room[$i]->title] = $i+1;

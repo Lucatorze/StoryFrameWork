@@ -12,6 +12,15 @@ include (__DIR__.'/includes/header.php');
     <div class="well">
         <p><?php echo $room->getDescription()." ".$room->getInfo() ?></p>
     </div>
+
+    <div class="alert alert-info" role="alert" align="center">
+        Your life :
+        <?php
+            for($i=0; $i < $session->get('life'); $i++){
+                echo "<span class=\"glyphicon glyphicon-heart\" aria-hidden=\"true\"></span>";
+            }
+        ?>
+    </div>
 </div>
 
 

@@ -22,6 +22,7 @@ The entrance is where the game begins. This empty room has doors to the south an
 # Install
 
 Git clone the repository, and composer install
+
 Point the Virtual Host on web/Index.php
 
 # app/Controller/doorController.php
@@ -53,31 +54,32 @@ Class of Room Creator
 
 # app/config/init.php
 
-In
+
+Initialisation of the story
 
 
 # app/config/routing.php
 
 
+Routing of the story according the choices
 
 
 # app/pages/game.php
 
 
-
+-	Narration of the story
+-	Choice done in your session
+-	Info about your session
 
 # app/pages/home.php
 
 
+Reset of the session.
+List of stories.
 
 
 # web/index.php
 
 
-
-
-# web/home.php
-
-
-
+Autoload, Routing management
 
