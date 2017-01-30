@@ -20,7 +20,6 @@ include_once __DIR__.'/../config/init.php';
             <?php
             if ($room->getBoolEnd() == "no" || $session->get('bool') == "yes" || $session->get('bool') == "no"){
                 doors($xml, $chapter, $game, $room, $listRoom);
-                var_dump($listRoom);
             } ?>
         </ul>
 
